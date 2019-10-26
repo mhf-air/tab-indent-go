@@ -10,7 +10,9 @@ import (
 
 /*
 description:
-  transforms the line-leading spaces into tabs
+  transforms the line-leading spaces into tabs according to tabwidth.
+for example, if tabwidth is 4, and a line has 7 leading spaces. After
+transformation the line will start with one tab followed by three spaces
 
 usage:
   go run a.go -input=b.vue -inplace
@@ -148,8 +150,12 @@ func run() []byte {
 			}
 
 			tabCount := spaceCount / flagTabWidth
+			spaceLeft := spaceCount % flagTabWidth
 			for j := 0; j < tabCount; j++ {
 				r = append(r, '\t')
+			}
+			for j := 0; j < spaceLeft; j++ {
+				r = append(r, ' ')
 			}
 
 			start = i
