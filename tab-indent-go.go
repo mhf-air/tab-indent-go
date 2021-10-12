@@ -16,7 +16,6 @@ transformation the line will start with one tab followed by three spaces
 
 usage:
     tab-indent -input=b.vue -inplace -tabwidth=4
-    tab-indent -input -inplace -tabwidth=4
 
 limitation:
     also transforms the line-leading spaces in multiline strings if that is not
