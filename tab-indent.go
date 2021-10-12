@@ -10,16 +10,17 @@ import (
 
 /*
 description:
-  transforms the line-leading spaces into tabs according to tabwidth.
+    transforms the line-leading spaces into tabs according to tabwidth.
 for example, if tabwidth is 4, and a line has 7 leading spaces. After
 transformation the line will start with one tab followed by three spaces
 
 usage:
-  go run a.go -input=b.vue -inplace
+    tab-indent -input=b.vue -inplace -tabwidth=4
+    tab-indent -input -inplace -tabwidth=4
 
 limitation:
     also transforms the line-leading spaces in multiline strings if that is not
-  what you want
+    what you want
 */
 
 var (
