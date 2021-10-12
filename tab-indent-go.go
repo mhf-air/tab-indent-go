@@ -15,7 +15,7 @@ for example, if tabwidth is 4, and a line has 7 leading spaces. After
 transformation the line will start with one tab followed by three spaces
 
 usage:
-    tab-indent -input=b.vue -inplace -tabwidth=4
+    tab-indent-go -tabwidth=4 -inplace -input a.conf
 
 limitation:
     also transforms the line-leading spaces in multiline strings if that is not
